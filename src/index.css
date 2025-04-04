@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+:root {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  color-scheme: light;
+  color: #1f2128;
+
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 85px;
+}
+
+.page-selection-card {
+  width: 370px;
+  height: 326px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 6px;
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 8px 15px rgba(20, 20, 20, 0.12),
+    0px 0px 4px rgba(20, 20, 20, 0.1);
+  padding: 10px 0;
+}
+
+.page-selection-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+  padding-right: 15px;
+  padding-bottom: 8px;
+  padding-left: 22px;
+}
+
+.line-layout {
+  width: 370px;
+  height: 20px;
+  padding: 10px 15px;
+}
+
+.line {
+  color: rgba(205, 205, 205, 1);
+}
+
+.button-layout {
+  padding: 10px 15px;
+}
+
+.button {
+  width: 340px;
+  height: 40px;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 0 auto;
+  background: rgba(255, 206, 34, 1);
+  color: rgba(31, 33, 40, 1);
+  cursor: pointer;
+  transition: transform 0.7s ease-in-out;
+  font-size: 14px;
+}
+
+.button:hover {
+  background-color: rgba(255, 216, 77, 1);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.custom-checkbox {
+  width: 23px;
+  height: 23px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(205, 205, 205, 1);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.custom-checkbox:hover {
+  border-color: rgba(189, 189, 189, 1);
+}
+
+.custom-checkbox:hover::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  width: 8px;
+  height: 16px;
+  border: solid rgba(227, 227, 227, 1);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox:checked {
+  background-color: rgba(36, 105, 246, 1);
+  border-color: rgba(36, 105, 246, 1);
+}
+
+.custom-checkbox:focus::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: rgba(0, 122, 255, 0.2);
+  border-radius: 12px;
+  transition: opacity 0.2s ease;
+}
+
+.custom-checkbox:checked:focus-visible::before {
+  opacity: 0;
+}
+
+.custom-checkbox:not(:checked):focus::before {
+  opacity: 0;
+}
+
+.custom-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  width: 8px;
+  height: 16px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  outline: none;
+}
