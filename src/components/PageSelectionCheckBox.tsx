@@ -5,7 +5,7 @@ type Props = {
 
 export const PageSelectionCheckBox = ({ pageName, value }: Props) => {
   return (
-    <div className="page-selection-row ">
+    <label className="page-selection-row cursor-pointer">
       <h1 className="text-[14px]">{pageName}</h1>
 
       <input
@@ -14,6 +14,6 @@ export const PageSelectionCheckBox = ({ pageName, value }: Props) => {
         className="custom-checkbox"
         value={value}
       />
-    </div>
+    </label>
   );
 };
