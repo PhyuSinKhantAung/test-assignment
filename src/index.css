@@ -39,6 +39,8 @@
 }
 
 .page-selection-row {
+  width: 370px;
+  height: 42px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -89,7 +91,8 @@
   appearance: none;
   -webkit-appearance: none;
   background-color: rgba(255, 255, 255, 1);
-  border: 2px solid rgba(205, 205, 205, 1);
+  border: 1px solid rgba(205, 205, 205, 1);
+  opacity: 60%;
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.2s ease, border-color 0.2s ease;
@@ -99,6 +102,7 @@
 
 .custom-checkbox:hover {
   border-color: rgba(189, 189, 189, 1);
+  opacity: 100%;
 }
 
 .custom-checkbox:hover::after {
@@ -108,13 +112,15 @@
   width: 8px;
   height: 16px;
   border: solid rgba(227, 227, 227, 1);
-  border-width: 0 2px 2px 0;
+  border-width: 0 1px 1px 0;
   transform: rotate(45deg);
+  opacity: 100%;
 }
 
 .custom-checkbox:checked {
   background-color: rgba(36, 105, 246, 1);
   border-color: rgba(36, 105, 246, 1);
+  opacity: 100%;
 }
 
 .custom-checkbox:focus::before {
@@ -125,15 +131,15 @@
   right: -5px;
   bottom: -5px;
   background: rgba(0, 122, 255, 0.2);
-  border-radius: 12px;
+  border-radius: 10px;
   transition: opacity 0.2s ease;
 }
 
-.custom-checkbox:checked:focus-visible::before {
+.custom-checkbox:not(:checked):focus::before {
   opacity: 0;
 }
 
-.custom-checkbox:not(:checked):focus::before {
+.custom-checkbox:checked:focus-visible::after {
   opacity: 0;
 }
 
@@ -142,9 +148,9 @@
   position: absolute;
   left: 6px;
   width: 8px;
-  height: 16px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
+  height: 17px;
+  border: solid rgba(255, 255, 255, 1);
+  border-width: 0 1px 1px 0;
   transform: rotate(45deg);
   outline: none;
 }
